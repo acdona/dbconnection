@@ -1,0 +1,17 @@
+{
+    "description": "DataBase connect class project",
+    "name": "acd/mvc",
+    "authors": [
+        {
+            "name": "Antonio Carlos Dona",
+            "email": "webmaster@amacd.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core",
+            "App\\": "app"
+        }
+    },
+    "require": {}
+}
