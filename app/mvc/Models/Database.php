@@ -1,5 +1,7 @@
 <?php
 namespace App\mvc\Models;
+use PDO;
+use Exception;
 
 /**
  * Classe Database responsible for controlling access to the database.
@@ -11,16 +13,9 @@ namespace App\mvc\Models;
  * @access protected
  *
 */
-abstract class Database extends Config
-{
+abstract class Database {
     /* Database builder method */
-    private function __construct() {
-        
-        $config = new Config();
-        $config->config();
-        var_dump($config);
-
-    }
+    private function __construct() {}
 
     /* Prevents the class from being cloned */
     private function __clone() {}
@@ -54,16 +49,16 @@ abstract class Database extends Config
         {
             $this->connection = new PDO($this->getDBType().":host=".$this->getHost().";port=".$this->getPort().";dbname=".$this->getDbName() . ";charset=utf8" , $this->getUser(),$this->getPass(), array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
         }
-        catch (PDOException $i)
+        catch (Exception $i)
         {
             /* If there is an error, display which. */
             die("Erro: <code>". $i->getMessage(). "</code>");
         }
-        return ($this->conexao);
+        return ($this->connection);
     }
 
     private function disconnect(){
-        $this->conexao = null;
+        $this->connection = null;
     }
 
      /* Select method that returns a VO or an array of objects 
