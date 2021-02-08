@@ -1,8 +1,6 @@
 # Database connection class project
 >  This class is responsible for connecting to several databases.
 
-News descriptions: ... implementing
-
 ![Images class](./app/mvc/assets/images/class.png)
 
 ## Ho to use
