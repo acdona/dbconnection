@@ -14,27 +14,37 @@
 
 ### Comands to use
         /* examples */
+        $query = "SELECT id, title, description, image
+        FROM sts_about_companies 
+        WHERE sts_situation_id =:sts_situation_id LIMIT 5";
+        $parameters = array(':sts_situation_id'=>1);
+
+        $instance = new \App\sts\Models\helper\Crud();
+        $listSobreEmpresa = $instance->read($query, $parameters, $instance);
+        
+        return $listSobreEmpresa;
+
         $Create = "INSERT INTO news(title , description) VALUES ('Title 28', 'News 28')";
         $Read=    "SELECT * FROM news";
         $Update = "UPDATE news SET title='Title 27', description='News 27' WHERE id = 27 ";
         $Delete = "DELETE FROM news WHERE id = :id";
 
         /* instantiating the class */
-        $Instance = new \App\mvc\Models\helper\Crud();
+        $instance = new \App\mvc\Models\helper\Crud();
 
         /* Create example */
-        $Instance->create($Create,$Parameters=null,$Instance);
+        $instance->create($Create,$Parameters=null,$instance);
 
         /* Read example */
-        $Instance->read($Read, $Parameters=null,$Instance);
+        $instance->read($Read, $Parameters=null,$instance);
 
         /* Update example */
-        $Instance->update($Update,$Parameters=null,$Instance);
+        $instance->update($Update,$Parameters=null,$instance);
 
         /* Delete example */
         $id = 10;
         $Parameters = array(':id' => $id);
-        $Instance->delete($Delete,$Parameters,$Instance);
+        $instance->delete($Delete,$Parameters,$instance);
 
 ## Built with
 - Visual Studio Code
@@ -70,8 +80,7 @@ COMMIT;
 ```
 
 ## Credits
-- Antonio Carlos Dona - [acdona](https://github.com/acdona) - Code adaptation author.
-- Gregory Monteiro - [devmedia](https://www.devmedia.com.br/) - Code author.
+- Antonio Carlos Dona - [acdona](https://github.com/acdona) - Code author.
 
 
 ### Tanks
