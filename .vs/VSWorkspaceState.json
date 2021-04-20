@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app\\mvc\\assets",
+    "\\app\\mvc\\assets\\css",
+    "\\app\\mvc\\assets\\js",
+    "\\app\\mvc\\Controllers",
+    "\\app\\mvc\\Models",
+    "\\app\\mvc\\Models\\helper",
+    "\\app\\mvc\\Views"
+  ],
+  "SelectedNode": "\\index.php",
+  "PreviewInSolutionExplorer": false
+}

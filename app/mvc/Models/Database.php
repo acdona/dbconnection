@@ -8,7 +8,7 @@ use Exception;
  *
  * @version 1.0
  *
- * @author Gregory Monteiro, Antonio Carlos Doná
+ * @author Antonio Carlos Doná
  *
  * @access protected
  *
