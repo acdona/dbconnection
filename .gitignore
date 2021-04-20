@@ -22,9 +22,6 @@
 # Various temporary generated files
 *.tmp
 
-# config.php
-config.php
-
 # test folders
 .tests/**/*
 
