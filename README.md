@@ -1,8 +1,6 @@
 # Database connection class project
 >  This class is responsible for connecting to several databases.
 
-![Images class](./app/mvc/assets/images/class.png)
-
 ## Ho to use
 
 ### Prerequisites
